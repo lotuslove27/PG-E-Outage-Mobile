@@ -1,0 +1,346 @@
+@font-face {
+	font-family: DIN_Medium;
+	src:url(DIN_Medium.ttf);
+}
+html,
+body {
+	margin:0;
+	padding:0;
+	height:100%; /* helps push footer to bottom */
+	background:#f3f3f3;
+}
+.logo {
+  background-image: url(images/logo.png);
+  width: 22px;
+  height: 22px;
+  margin:11px 11px 11px 13px;
+  position:absolute; /* allows title to ignore */
+}
+/* doubles resolution for retina screens */
+@media only screen and
+    (-webkit-min-device-pixel-ratio: 2) {
+  .logo {
+    background-image: url(images/logo@2.png);
+	background-size:22px 22px;
+  }
+}
+.ui-page {
+	min-height:100%; /* helps push footer to bottom */
+	position:relative;
+}
+.ui-btn-inline, .ui-btn {
+	margin:0;
+}
+/* opening statement for each page contained here */
+#instructions {
+	height:75px;
+	margin-bottom:5px;
+}
+.ui-field-contain {
+	margin:4px 0 4px 0;
+}
+.ui-content {
+	padding: 18px 13px 40px 13px /* Doesn't include footer so bottom padding matches footer size */
+}
+/* opening header */
+.ui-content h4 {
+	margin:0;
+	padding:0;
+	size:30px;
+	color:#444;
+}
+/* opening paragraph */
+.ui-content p {
+	padding-top:8px;
+	margin:0;
+	size:7px;
+	width:90%;
+	color:#444;
+	line-height:115%;
+}
+.ui-field-contain input.ui-input-text, .ui-field-contain textarea.ui-input-text, .ui-field-contain .ui-input-search {
+	width:100%; /*makes textbox full width */
+	height:40px;
+	margin:3px 0 2px 0;
+	padding:0 0 0 13px;
+	line-height:normal;
+}
+.ui-field-contain .ui-controlgroup-controls {
+	width:100%;
+	display:table;
+	table-layout:fixed; /* last 3 lines allow radios to evenly split width */
+}
+.ui-controlgroup-horizontal .ui-controlgroup-controls:before, .ui-controlgroup-horizontal .ui-controlgroup-controls:after {
+	content:normal;
+}
+.ui-radio .ui-btn {
+	height:40px;
+	text-transform: uppercase; /* force text to uppercase */
+}
+.ui-controlgroup-horizontal .ui-radio {
+	float:none;
+}
+.ui-field-contain { 
+	border: none;
+	margin:5px 0 5px 0; /* spaces each input from other content */
+	padding:0; 
+}
+.ui-radio {
+	display:table-cell; /* force radios to split width */
+}
+.ui-btn-inner {
+	padding:.83em 0;
+	border:none;
+}
+/* remove default JQM shadows */
+.ui-shadow {
+	box-shadow:none;
+}
+/* Orange Continue Button Starts Here */
+.ui-btn-up-f {
+	background:#dd8732;
+	text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.28);
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #ffcc33 ), to( #dd8732 ));
+	background-image: -webkit-linear-gradient( #ffcc33, #dd8732 );
+	background-image: -moz-linear-gradient( #ffcc33, #dd8732 );
+	background-image: -ms-linear-gradient( #ffcc33, #dd8732 );
+	background-image: -o-linear-gradient( #ffcc33, #dd8732 );
+	background-image: linear-gradient( #ffcc33, #dd8732 );
+	font-family: DIN_Medium;
+}
+.ui-btn-down-f {
+	border: 0;
+	background: #06ade4;
+	font-weight:normal;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.38);
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #06ade4 ), to( #148cbf ));
+	background-image: -webkit-linear-gradient( #06ade4, #148cbf );
+	background-image: -moz-linear-gradient( #06ade4, #148cbf );
+	background-image: -ms-linear-gradient( #06ade4, #148cbf );
+	background-image: -o-linear-gradient( #06ade4, #148cbf );
+	background-image: linear-gradient( #06ade4, #148cbf );
+	font-family: DIN_Medium;
+	-webkit-box-shadow: 1px 3px 7px rgba(0, 0, 0, 0.42) inset;
+	-moz-box-shadow:    1px 3px 7px rgba(0, 0, 0, 0.42) inset;
+	box-shadow:         1px 3px 7px rgba(0, 0, 0, 0.42) inset;
+}
+.ui-btn-up-f, .ui-btn-down-f, .ui-btn-hover-f {
+	height:30px;
+	color: #fff;
+	float:right;
+	width:47%;
+	text-transform: uppercase; /* force text to uppercase */
+	text-decoration:none;
+}
+/* Orange Continue Button ENDS Here */
+/* Grey Cancel Button Starts Here */
+.ui-btn-up-g {
+	background:#6f6f6f;
+	text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.28);
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #ccc ), to( #6f6f6f ));
+	background-image: -webkit-linear-gradient( #ccc, #6f6f6f );
+	background-image: -moz-linear-gradient( #ccc, #6f6f6f );
+	background-image: -ms-linear-gradient( #ccc, #6f6f6f );
+	background-image: -o-linear-gradient( #ccc, #6f6f6f );
+	background-image: linear-gradient( #ccc, #6f6f6f );
+	font-family: DIN_Medium;
+}
+.ui-btn-down-g {
+	border: 0;
+	background: #06ade4;
+	font-weight:normal;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.38);
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #06ade4 ), to( #148cbf ));
+	background-image: -webkit-linear-gradient( #06ade4, #148cbf );
+	background-image: -moz-linear-gradient( #06ade4, #148cbf );
+	background-image: -ms-linear-gradient( #06ade4, #148cbf );
+	background-image: -o-linear-gradient( #06ade4, #148cbf );
+	background-image: linear-gradient( #06ade4, #148cbf );
+	font-family: DIN_Medium;
+	-webkit-box-shadow: 1px 3px 7px rgba(0, 0, 0, 0.42) inset;
+	-moz-box-shadow:    1px 3px 7px rgba(0, 0, 0, 0.42) inset;
+	box-shadow:         1px 3px 7px rgba(0, 0, 0, 0.42) inset;
+}
+.ui-btn-up-g, .ui-btn-down-g, .ui-btn-hover-g {
+	height:30px;
+	color: #fff;
+	float:left;
+	width:47%;
+	text-transform: uppercase; /* force text to uppercase */
+	text-decoration:none;
+}
+/* Grey Cancel Button ENDS Here */
+.ui-footer .ui-btn-inner {
+	font-size:16px;
+}
+/* Radio Buttons Start Here */
+.ui-btn-up-p {
+	background: #fff;
+	color: #06ade4;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.38);
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #fff ), to( #ebebeb ));
+	background-image: -webkit-linear-gradient( #fff, #ebebeb );
+	background-image: -moz-linear-gradient( #fff, #ebebeb );
+	background-image: -ms-linear-gradient( #fff, #ebebeb );
+	background-image: -o-linear-gradient( #fff, #ebebeb );
+	background-image: linear-gradient( #fff, #ebebeb );
+	font-family: DIN_Medium;
+	-webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.34);
+	-moz-box-shadow:    0px 0px 5px rgba(0, 0, 0, 0.34);
+	box-shadow:         0px 0px 5px rgba(0, 0, 0, 0.34);
+}
+.ui-btn-down-p, .ui-btn-hover-p {
+	background: #fff;
+	color: #06ade4;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.38);
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #ebebeb ), to( #dbdbdb ));
+	background-image: -webkit-linear-gradient( #ebebeb, #dbdbdb );
+	background-image: -moz-linear-gradient( #ebebeb, #dbdbdb );
+	background-image: -ms-linear-gradient( #ebebeb, #dbdbdb );
+	background-image: -o-linear-gradient( #ebebeb, #dbdbdb );
+	background-image: linear-gradient( #ebebeb, #dbdbdb );
+	font-family: DIN_Medium;
+	-webkit-box-shadow: 1px 3px 7px rgba(0, 0, 0, 0.42) inset;
+	-moz-box-shadow:    1px 3px 7px rgba(0, 0, 0, 0.42) inset;
+	box-shadow:         1px 3px 7px rgba(0, 0, 0, 0.42) inset;
+}
+.ui-btn-active {
+	border: 0;
+	background: #06ade4;
+	color: #fff;
+	font-weight:normal;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.38);
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #06ade4 ), to( #148cbf ));
+	background-image: -webkit-linear-gradient( #06ade4, #148cbf );
+	background-image: -moz-linear-gradient( #06ade4, #148cbf );
+	background-image: -ms-linear-gradient( #06ade4, #148cbf );
+	background-image: -o-linear-gradient( #06ade4, #148cbf );
+	background-image: linear-gradient( #06ade4, #148cbf );
+	font-family: DIN_Medium;
+	-webkit-box-shadow: 1px 3px 7px rgba(0, 0, 0, 0.42) inset;
+	-moz-box-shadow:    1px 3px 7px rgba(0, 0, 0, 0.42) inset;
+	box-shadow:         1px 3px 7px rgba(0, 0, 0, 0.42) inset;
+}
+/* Radio  */
+.ui-corner-all {
+	-webkit-border-radius: 0 /*{global-radii-blocks}*/;
+	border-radius: 0 /*{global-radii-blocks}*/;
+}
+.ui-btn-corner-all {
+	-webkit-border-radius: 0 /*{global-radii-buttons}*/;
+	border-radius: 0 /*{global-radii-buttons}*/;
+}
+.ui-corner-tl {
+	-moz-border-radius-topleft: 0;
+	-webkit-border-top-left-radius: 0;
+	border-top-left-radius: 0
+}
+.ui-corner-tr {
+	-moz-border-radius-topright: 0;
+	-webkit-border-top-right-radius: 0;
+	border-top-right-radius: 0
+}
+.ui-corner-bl {
+	-moz-border-radius-bottomleft: 0;
+	-webkit-border-bottom-left-radius: 0;
+	border-bottom-left-radius: 0
+}
+.ui-corner-br {
+	-moz-border-radius-bottomright: 0;
+	-webkit-border-bottom-right-radius: 0;
+	border-bottom-right-radius: 0
+}
+.ui-corner-top {
+	-moz-border-radius-topleft: 0;
+	-webkit-border-top-left-radius: 0;
+	border-top-left-radius: 0;
+	-moz-border-radius-topright: 0;
+	-webkit-border-top-right-radius: 0;
+	border-top-right-radius: 0
+}
+.ui-corner-bottom {
+	-moz-border-radius-bottomleft: 0;
+	-webkit-border-bottom-left-radius: 0;
+	border-bottom-left-radius: 0;
+	-moz-border-radius-bottomright: 0;
+	-webkit-border-bottom-right-radius: 0;
+	border-bottom-right-radius: 0
+}
+.ui-corner-right {
+	-moz-border-radius-topright: 0;
+	-webkit-border-top-right-radius: 0;
+	border-top-right-radius: 0;
+	-moz-border-radius-bottomright: 0;
+	-webkit-border-bottom-right-radius: 0;
+	border-bottom-right-radius: 0
+}
+.ui-corner-left {
+	-moz-border-radius-topleft: 0;
+	-webkit-border-top-left-radius: 0;
+	border-top-left-radius: 0;
+	-moz-border-radius-bottomleft: 0;
+	-webkit-border-bottom-left-radius: 0;
+	border-bottom-left-radius: 0
+}
+.ui-checkbox .ui-icon,
+.ui-selectmenu-list .ui-icon {
+	-webkit-border-radius: 0;
+	border-radius: 0;
+}
+input.ui-input-text, textarea.ui-input-text, .ui-input-search {
+	-webkit-box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.3) inset;
+	-moz-box-shadow:    0px 0px 7px rgba(0, 0, 0, 0.3) inset;
+	box-shadow:         0px 0px 7px rgba(0, 0, 0, 0.3) inset;
+	border:0;
+	background:#fbfbfb;
+}
+.ui-input-text.ui-focus, .ui-input-search.ui-focus {
+	-moz-box-shadow: 0 0 12px #387bbe;
+	-webkit-box-shadow: 0 0 12px #387bbe;
+	box-shadow: 0 0 12px #387bbe
+}
+.ui-footer {
+	width:100%;
+	position:absolute;
+	left:0;
+	bottom:0;
+	line-height:none;
+}
+#stretch {
+	padding:5px 13px 0 14px;
+}
+.ui-bar-p {
+	background:#fff;
+	color:#f7a30a;
+	-webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.46);
+	-moz-box-shadow:    0px 3px 5px rgba(0, 0, 0, 0.46);
+	box-shadow:         0px 3px 5px rgba(0, 0, 0, 0.46);
+	height:44px;
+}
+.ui-bar-f {
+	background:none;
+	height: 42px;
+}
+.ui-header .ui-title, .ui-footer .ui-title {
+	font-size: 18px;
+	margin: 0;
+	padding: 0;
+	text-overflow:none;
+	overflow:visible;
+}
+.ui-header .ui-title{
+	padding-top: 15px;
+	text-transform: uppercase; /* force text to uppercase */
+}
+h2 {
+	position:absolute;
+	right:0;
+	top:0;
+	color:#868686;
+	padding:17px 3px 0 0 !important; 
+	font-size:12px !important;
+	text-transform:none !important;
+}
+.ui-bar-p, .ui-bar-p input, .ui-bar-p select, .ui-bar-p textarea, .ui-bar-p button, .ui-body-p, .ui-body-p input, .ui-body-p select, .ui-body-p textarea, .ui-body-p button {
+	font-family: DIN_Medium, Helvetica, Arial, sans-serif;
+}
