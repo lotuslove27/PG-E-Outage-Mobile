@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <title>
+        </title>
+        <link rel="stylesheet" href="https://s3.amazonaws.com/codiqa-cdn/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+        <link rel="stylesheet" href="../my.css" />
+        <script src="https://s3.amazonaws.com/codiqa-cdn/jquery-1.7.2.min.js">
+        </script>
+        <script>
+		$(document).bind("mobileinit", function(){
+        $.mobile.defaultPageTransition = 'slide';
+		});
+		</script>
+        <script src="https://s3.amazonaws.com/codiqa-cdn/mobile/1.2.0/jquery.mobile-1.2.0.min.js">
+        </script>
+        <!-- User-generated css -->
+        <style>
+        </style>
+        <!-- User-generated js -->
+        <script>
+$(function() {
+    $("input:radio").click(function(){
+            $('.toHide').hide();
+            $("#blk-"+$(this).val()).show();
+    });
+	$(document).delegate('.ui-page', 'pagebeforeshow', function () {
+    		$("#blk-"+$('#toggle1 input[type=radio]:checked').val()).show();
+			$("#blk-"+$('#toggle2 input[type=radio]:checked').val()).show();
+	});
+ });
+        </script>
+    </head>
+    <body>
+    
+<form name="form1" action="multipageresult.php" method="POST">
+        <!-- Home -->
+        <div data-role="page" data-theme="p" id="step1">
+            <div data-theme="p" data-role="header">
+            	<div>
+                <a href="#" class="logo"></a>
+                </div>
+                <h1>
+                    Report "No Power"
+                </h1>
+                <h2>
+                	(1 of 4)
+                </h2>
+            </div>
+            <div data-role="content">
+            	<div id="instructions">
+                <h4>
+                    Where is the problem?
+                </h4>
+                <p>
+                	Locate the problem by address or by the phone number associated with the account.
+                </p>
+                </div>
+                <div data-role="fieldcontain" id="toggle1">
+                    <fieldset data-role="controlgroup" data-type="horizontal">
+                        <input id="radio1" name="toggler1" value="1" type="radio" checked="checked" />
+                        <label for="radio1">
+                            Address
+                        </label>
+                        <input id="radio2" name="toggler1" value="2" type="radio" />
+                        <label for="radio2">
+                            Phone
+                        </label>
+                    </fieldset>
+                </div>
+                <div data-role="fieldcontain" id="blk-1" class="toHide">
+                    <fieldset data-role="controlgroup">
+                        <label for="address" class="ui-hidden-accessible">Address:</label>
+                        </label>
+                        <input name="" id="address" placeholder="Enter Address" value="" type="text" />
+                    </fieldset>
+                    <fieldset data-role="controlgroup">
+                        <label for="location" class="ui-hidden-accessible">Zip or City:</label>
+                        </label>
+                        <input name="" id="location" placeholder="Enter Zip Code or City" value="" type="text" />
+                    </fieldset>
+                </div>
+                <div data-role="fieldcontain" id="blk-2" class="toHide" style="display:none">
+                    <fieldset data-role="controlgroup">
+                        <label for="accountPhone" class="ui-hidden-accessible">Phone Number:</label>
+                        </label>
+                        <input name="" id="accountPhone" placeholder="Enter Account Phone Number" value="" type="text" />
+                    </fieldset>
+                </div>
+            </div>
+                <div data-role="footer" data-theme="f">
+                <div id="stretch">
+                <a data-role="button" data-theme="g" data-inline="true" data-transition="slide" href="../">
+                    Cancel
+                </a>
+                <a data-role="button" data-inline="true" data-transition="slide" href="#step2">
+                    Continue
+                </a>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div data-role="page" data-theme="p" id="step2">
+            <div data-theme="p" data-role="header">
+            	<div>
+                <a href="#" class="logo"></a>
+                </div>
+                <h1>
+                    Contact Info
+                </h1>
+                <h2>
+                	(2 of 4)
+                </h2>
+            </div>
+            <div data-role="content">
+            	<div id="instructions">
+                <h4>
+                    How can we contact you?
+                </h4>
+                <p>
+                	If we have any questions, what phone number can we reach you at?
+                </p>
+                </div>
+                <div data-role="fieldcontain" id="toggle2">
+                    <fieldset data-role="controlgroup" data-type="horizontal">
+                        <input id="radio3" name="toggler2" value="3" type="radio" checked="checked" />
+                        <label for="radio3">
+                            Voice
+                        </label>
+                        <input id="radio4" name="toggler2" value="4" type="radio" />
+                        <label for="radio4">
+                            Text
+                        </label>
+                        <input id="radio5" name="toggler2" value="5" type="radio" />
+                        <label for="radio5">
+                            Email
+                        </label>
+                        <input id="radio6" name="toggler2" value="6" type="radio" />
+                        <label for="radio6">
+                            None
+                        </label>
+                    </fieldset>
+                </div>
+               	<div data-role="fieldcontain" id="blk-3" class="toHide">
+                    <fieldset data-role="controlgroup">
+                        <label for="phone" class="ui-hidden-accessible">Phone:</label>
+                        </label>
+                        <input name="" id="phone" placeholder="Enter Phone Number" value="" type="text" />
+                    </fieldset>
+                </div>
+                <div data-role="fieldcontain" id="blk-4" class="toHide" style="display:none">
+                    <fieldset data-role="controlgroup">
+                        <label for="phone" class="ui-hidden-accessible">Phone:</label>
+                        </label>
+                        <input name="" id="phone" placeholder="Enter Phone Number" value="" type="text" />
+                    </fieldset>
+                </div>
+                <div data-role="fieldcontain" id="blk-5" class="toHide" style="display:none">
+                    <fieldset data-role="controlgroup">
+                        <label for="email" class="ui-hidden-accessible">Email:</label>
+                        </label>
+                        <input name="" id="email" placeholder="Enter Email Address" value="" type="text" />
+                    </fieldset>
+                </div>
+                <div data-role="fieldcontain" id="blk-6" class="toHide" style="display:none">
+                </div>
+            </div>
+                <div data-role="footer" data-theme="f">
+                <div id="stretch">
+                <a data-role="button" data-theme="g" data-inline="true" data-transition="slide" data-direction="reverse" href="../">
+                    Cancel
+                </a>
+                <a data-role="button" data-inline="true" data-transition="slide" href="#step3">
+                    Continue
+                </a>
+                </div>
+                </div>
+            </div>
+         <div data-role="page" data-theme="p" id="step3">
+            <div data-theme="p" data-role="header">
+            	<div>
+                <a href="#" class="logo"></a>
+                </div>
+                <h1>
+                    Verify Information
+                </h1>
+                <h2>
+                	(3 of 4)
+                </h2>
+            </div>
+            <div data-role="content">
+            	<div id="instructions">
+                <h4>
+                    Please verify the following:
+                </h4>
+                <p>
+                	I am reporting:
+                </p>
+                </div>
+            	<div id="summary">
+                <h5>
+                No Power at:
+                </h5>
+                <p>
+                1201 Mission St.
+                </p>
+                <h5>
+                contact:
+                </h5>
+                <p>
+                (415)123-1234 (Voice)
+                </p>
+                </div>
+            </div>
+                <div data-role="footer" data-theme="f">
+                <div id="stretch">
+                <a data-role="button" data-theme="g" data-inline="true" data-transition="slide" data-direction="reverse" href="../">
+                    Cancel
+                </a>
+                <a data-role="button" data-inline="true" data-transition="slide" href="#step4">
+                    Submit
+                </a>
+                </div>
+                </div>
+            </div>
+        <div data-role="page" data-theme="p" id="step4">
+            <div data-theme="p" data-role="header">
+            	<div>
+                <a href="#" class="logo"></a>
+                </div>
+                <h1>
+                    Confirmation
+                </h1>
+                <h2>
+                	(4 of 4)
+                </h2>
+            </div>
+            <div data-role="content">
+            	<div id="instructions">
+                <h4>
+                    Status: Received
+                </h4>
+                <p>
+                	Confirmation #: 13031234
+                </p>
+                </div>
+            	<div id="summary">
+                <h5>
+                No Power at:
+                </h5>
+                <p>
+                1201 Mission St.
+                </p>
+                <h5>
+                contact:
+                </h5>
+                <p>
+                (415)123-1234 (Voice)
+                </p>
+                </div>
+            </div>
+                <div data-role="footer" data-theme="f">
+                <div id="stretch">
+                <a data-role="button" data-theme="g" data-inline="true" data-transition="slide" data-direction="reverse" href="../">
+                    Home
+                </a>
+                <a data-role="button" data-inline="true" data-transition="slide" href="#map">
+                    View Current Outages
+                </a>
+                </div>
+                </div>
+            </div>
+        </div>
+</form>
+<script>
+$(function(){
+    $("input[name=jquery-submit]").on("click", function(){
+        $.post('stub.php', $("form[name=form1]").serialize(), function(data) {
+            alert(data);
+        }).error(function(){
+            alert("Error submiting the form");
+        });
+        //return false;
+    });
+});
+</script>
+    </body>
+</html>
