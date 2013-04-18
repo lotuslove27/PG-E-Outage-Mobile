@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <title>
+        </title>
+        <link rel="stylesheet" href="https://s3.amazonaws.com/codiqa-cdn/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+        <link rel="stylesheet" href="my.css" />
+        <script src="https://s3.amazonaws.com/codiqa-cdn/jquery-1.7.2.min.js">
+        </script>
+        <script>
+  	$(document).bind("mobileinit", function(){
+        $.mobile.defaultPageTransition = 'slide';
+		});
+		</script>
+        <script src="https://s3.amazonaws.com/codiqa-cdn/mobile/1.2.0/jquery.mobile-1.2.0.min.js">
+        </script>
+        <!-- User-generated css -->
+        <style>
+        </style>
+        <!-- User-generated js -->
+        <script>
+$(function() {
+    $("input:radio").click(function(){
+            $('.toHide').hide();
+            $("#blk-"+$(this).val()).show();
+    });
+});
+        </script>
+    </head>
+    <body>
+    
+<form name="form1" action="multipageresult.php" method="POST">
+        <!-- Home -->
+        <div data-role="page" data-theme="p" id="step1">
+            <div data-theme="p" data-role="header">
+            	<div>
+                <a href="#" class="logo"></a>
+                </div>
+                <h1>
+                    Outage Center
+                </h1>
+            </div>
+            <div data-role="content">
+            	<div id="instructions">
+                <h4>
+                    Welcome to the PG&E Outage Center
+                </h4>
+                <p>
+                	Reporting the outage is fast and easy. Please choose one of the following:
+                </p>
+                </div>
+            </div>
+            <div data-role="collapsible">
+                <h3>
+                Report Power Problem
+                </h3>
+                <ul data-role="listview" data-inset="true">
+                <li data-theme="c">
+                    <a href="report/" data-transition="slide">
+                        No Power
+                    </a>
+                </li>
+                <li data-theme="c">
+                    <a href="report/" data-transition="slide">
+                        Intermintent Power
+                    </a>
+                </li>
+                </ul>
+            </div>
+            <ul data-role="listview" data-inset="true">
+            <li data-theme="c">
+                <a href="#outageMap" data-transition="slide">
+                    View Current Outages
+                </a>
+            </li>
+            <li data-theme="c">
+                <a href="#page1" data-transition="slide">
+                    Report Down Power Line
+                </a>
+            </li>
+            <li data-theme="c">
+                <a href="#page1" data-transition="slide">
+                    Report Gas Leak
+                </a>
+            </li>
+        </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
